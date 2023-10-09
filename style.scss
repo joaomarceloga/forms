@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$salmon: #ff7979;
+$green: #38cc8b;
+$purple: #5e54a4;
+$black: #3d3b48;
+$white: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: $salmon;
+  color: $white;
+  padding: 92px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__text {
+    h1 {
+      text-align: center;
+      font-size: 1.75rem;
+      line-height: 36px;
+      letter-spacing: -0.292px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 500;
+      line-height: 26px;
+    }
+  }
+
+  &__form {
+    > button {
+      color: $white;
+      background-color: $purple;
+      border-radius: 10px;
+      box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.15);
+      line-height: 26px;
+      letter-spacing: 0.268px;
+      border: none;
+      margin-bottom: 24px;
+      padding: 18px 66px;
+    }
+
+    form {
+      border-radius: 10px;
+      background: $white;
+      box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    input {
+      border-radius: 5px;
+      border: 1px solid #dedede;
+      background: $white;
+      padding: 15px 19px;
+    }
+    input::placeholder {
+      font-weight: 600;
+    }
+    .submit {
+      background-color: $green;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.09) inset;
+      color: $white;
+      text-align: center;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: 1px;
+      padding: 15px 43px;
+    }
+    p {
+      color: #bab7d4;
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 500;
+      line-height: 21px;
+    }
+    span {
+      color: #ff7979;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__text {
+      width: 50%;
+      h1 {
+        margin-bottom: 39px;
+        text-align: justify;
+      }
+
+      p {
+        text-align: left;
+        max-width: 525px;
+      }
+    }
+
+    &__form {
+      width: 50%;
+      padding: 121px 45px;
+
+      > button {
+        width: 100%;
+      }
+
+      form {
+        min-height: 474px;
+      }
+    }
+  }
+}
